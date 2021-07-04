@@ -89,7 +89,7 @@ function reducer(state = { playlist : {}}, action) {
         return state.playlist;
     }
 }
-
+var searchresults = []
 export const MyLibrary = ({songsList, results}) => {
     let playlist = ""; 
     const [songList, setsongList] = useState([])
@@ -97,6 +97,8 @@ export const MyLibrary = ({songsList, results}) => {
     const [isvisible, setisvisible] = useState("hide");
     let mylist = JSON.parse(localStorage.getItem("playlist"));
     const [state, dispatch] = useReducer(reducer, (playlist)); 
+    if(searchresults.length === 0)
+    {searchresults = [...songList];}
 
     const setData = (list) => {
         setsongs(list);
@@ -167,13 +169,13 @@ export const MyLibrary = ({songsList, results}) => {
     const searchData = useCallback(value => {
         if(value)
         {   val = value;
-            var searchResults = results.filter(element => element.title.includes(value.toLowerCase()))
+            var searchResults = songList.filter(element => element.title.includes(value.toLowerCase()))
             setsongList(searchResults)}
         else{
         val = "";
-        setsongList(results)
+        setsongList(searchresults)
         }
-    }, [setsongList, results])
+    }, [setsongList, songList])
     
         return(
             <div>
