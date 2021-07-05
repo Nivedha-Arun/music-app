@@ -169,13 +169,13 @@ export const MyLibrary = ({songsList, results}) => {
     const searchData = useCallback(value => {
         if(value)
         {   val = value;
-            var searchResults = songList.filter(element => element.title.includes(value.toLowerCase()))
+            var searchResults = searchresults.filter(element => element.title.includes(value.toLowerCase()))
             setsongList(searchResults)}
         else{
         val = "";
         setsongList(searchresults)
         }
-    }, [setsongList, songList])
+    }, [setsongList])
     
         return(
             <div>
