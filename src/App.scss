@@ -35,11 +35,10 @@
 
 .main{
   width: 26%;
-  height: 117vh;
+  height: 121vh;
 
   a{
-    font-size: 2.3rem;
-    margin-left: 20px;
+	font-size: 1.8rem;
     text-decoration: none;
     color: #fff;
     position: relative;
@@ -78,11 +77,24 @@
   width: 100%;
   background-image: linear-gradient(#8ca6ef, #2f0a61);
   font-family: 'Source Serif Pro', serif;
-}
+  height: 121vh;
+  
+  .song-title{
+  
+  h1{
+  margin: 10px auto 0;
+  }
+  
+  h3{
+  margin: 3px 0 20px;
+  }
+  }
+  }
+
 
 .player{
   width: 100%;
-  height: 7rem;
+  height: 5rem;
   background-color: #000;
   position: fixed;
   bottom: 0%;
@@ -92,7 +104,7 @@
     display: flex;
     color: #fff;
     height: 1rem;
-    padding: 23px;
+    padding: 11px;
     width: 19%;
     margin: 0 28%;
 
@@ -121,7 +133,7 @@
 .search{
 
   input[type="text"]{
-    padding: 20px;
+	padding: 11px;
     width: 41%;
     border-radius: 30px;
     border: none;
@@ -163,16 +175,19 @@ input:focus, textarea:focus, select:focus{
     height: 4rem;
 
     img{
-      width: 50%;
+      width: 44%;
       }
 
     h5{
       color: #e1e1e1;
+	  font-size: 12px !important;
     }
 
     .song-name{
-      text-align: left;
-      padding-left: 2rem;
+      font-size: 14px;
+	  text-align: left;
+      margin: 10px;
+      padding-left: 1rem;
       }
 
       button{
@@ -211,9 +226,9 @@ input:focus, textarea:focus, select:focus{
 
     .btn-create{
       margin: 2rem 0px 0rem 2rem;
-      padding: 18px;
-      width: 12rem;
-      font-size: 1.2rem;
+	  padding: 12px;
+      width: 10rem;
+      font-size: 1rem;
       background-color: #c6c6f7;
       border: none;
   }
@@ -246,8 +261,8 @@ input:focus, textarea:focus, select:focus{
 
     .actions{
       border-radius: 30px;
-      padding: 12px;
-      width: 14%;
+      padding: 8px;
+      width: 13%;
       font-size: 1rem;
       margin: 10px;
       border: none;
